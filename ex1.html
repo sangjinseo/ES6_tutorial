@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="버튼">버튼이에요</button>
+    <script>
+        // var 사람 = {
+        //     name : '손흥민',
+        //     sayHi : function() { 
+        //          console.log('안녕 나는 ' + this.name)  // this 쓰기.
+        //     }
+        // }
+
+        //사람.sayHi();
+
+        // var 자료 = {
+        //     data : [1,2,3,4,5],
+        // }
+
+        // 자료.전부더하기 = function (){
+        //     var 합 = 0;
+        //     this.data.forEach(function(a){
+        //         합 = 합 + a;
+        //     });
+        //     console.log(합);
+        // } 
+        document.getElementById('버튼').addEventListener('click', function () {
+            //  var  버튼 = this;  // 옛날 방식
+            // setTimeout( function(){console.log(버튼.innerHTML)}, 2000); // arrow 의 사용법
+
+            setTimeout( () => {console.log(this.innerHTML)}, 2000 ); // 요즘방식 arrow 사용
+        })
+
+
+        
+        
+
+    </script>
+
+</body>
+</html>

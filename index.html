@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+
+    <script>
+        function 함수() {
+            console.log(this);
+        }
+
+        함수();
+        //window.함수();
+
+        console.log(this);
+        var 오브젝트 = {
+            data : {
+                함수 : () => {
+                    console.log(this);
+                }
+            }
+        }
+        
+        // 오브젝트.data;
+        오브젝트.data.함수();
+    </script>
+</body>
+</html>

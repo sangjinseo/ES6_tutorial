@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <button id="버튼">버튼 </button>
+    <script>
+        var 함수 = a => a + 10; // 파라메터가 1개 인경우 사용가능
+        함수(5);
+
+        [1,2,3,4].forEach( a => console.log(a));
+        document.getElementById('버튼').addEventListener('click',
+        function (e) {
+            this; // 함수내의 this값을 변경하지 않음 , 즉 상위에 있는 this값을 바로쓴다.
+            e.currentTarget; // this대신 사용하면된다.
+        });
+
+        var 오브젝트 = {
+            함수 : () => {
+                return this
+            }
+        }
+        오브젝트.함수();
+
+
+    </script>
+</body>
+</html>

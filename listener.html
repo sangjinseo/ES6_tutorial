@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="버튼">버튼</button>
+    </div>
+
+    <script>
+        document.getElementById('버튼').addEventListener('click',
+        function(e) {
+            // console.log(this);
+            // console.log(e.currentTarget);
+            var 어레이 = [1,2,3];
+            어레이.forEach(function(a){
+                console.log(this);
+            });
+        });
+
+        var 오브젝트 = {
+            이름 : ['서','김','율'],
+            함수 : function () {
+                console.log(this); // 오브젝트? ()=> 를 쓰면 window
+                오브젝트.이름.forEach(()=> {
+                    console.log(this) // 재설정하지 않고 this를 그대로 사용함
+                })
+            }
+        }
+        
+        오브젝트.함수();
+
+    </script>
+</body>
+</html>
